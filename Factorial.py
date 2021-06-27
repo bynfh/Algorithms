@@ -19,4 +19,5 @@ def FactorialLoop(numb: int) -> int:
 
 
 print(FactorialLoop(1000))
-print(FactorialLoop(997))
+print(FactorialLoop(998))
+
