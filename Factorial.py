@@ -1,4 +1,4 @@
-"""Function with recursion restrict count of call. Max count of call == 998
+"""Function with recursion restrict count of call. Max count of call == 997
    Function with loop don't have restrict in call"""
 
 
@@ -20,3 +20,4 @@ def FactorialLoop(numb: int) -> int:
 
 print(FactorialLoop(1000))
 print(FactorialLoop(998))
+
