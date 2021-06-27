@@ -18,5 +18,5 @@ def FactorialLoop(numb: int) -> int:
     return factorial
 
 
-print(FactorialLoop(100))
+print(FactorialLoop(1000))
 print(FactorialLoop(997))
