@@ -9,7 +9,7 @@ def calculate_fact_recursion(numb: int) -> int:
     return calculate_fact_recursion(numb - 1) * numb
 
 
-def FactorialLoop(numb: int) -> int:
+def calculate_fact_by_loop(numb: int) -> int:
     """Function calculate factorial numb"""
     factorial = 1
     while numb > 1:
@@ -18,6 +18,6 @@ def FactorialLoop(numb: int) -> int:
     return factorial
 
 
-print(FactorialLoop(10000))
-print(FactorialLoop(998))
+print(calculate_fact_recursion(10000))
+print(calculate_fact_by_loop(998))
 
