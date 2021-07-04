@@ -2,11 +2,11 @@
    Function with loop don't have restrict in call"""
 
 
-def FactorialRecursion(numb: int) -> int:
+def calculate_fact_recursion(numb: int) -> int:
     """Function calculate factorial numb. Max numb == 998"""
     if numb == 0 or numb == 1:
         return 1
-    return FactorialRecursion(numb - 1) * numb
+    return calculate_fact_recursion(numb - 1) * numb
 
 
 def FactorialLoop(numb: int) -> int:
