@@ -1,4 +1,4 @@
-from ObserverPattern.observer_base import ObserverBase
+from observ_pattern_async.observer_base import ObserverBase
 
 
 class AsyncSecondRealisationObserver(ObserverBase):
