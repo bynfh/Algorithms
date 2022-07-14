@@ -1,4 +1,4 @@
-"""It is example Command Pattern"""
+"""It is example Command Pattern."""
 
 from sys import stdout as console
 
@@ -25,10 +25,10 @@ class Command:
 # Команда rm
 class RmCommand(Command):
     def execute(self):
-        console.write("You are executed \"rm\" command\n")
+        console.write('You are executed "rm" command\n')
 
     def cancel(self):
-        console.write("You are canceled \"rm\" command\n")
+        console.write('You are canceled "rm" command\n')
 
     @staticmethod
     def name():
@@ -38,10 +38,10 @@ class RmCommand(Command):
 # Команда uptime
 class UptimeCommand(Command):
     def execute(self):
-        console.write("You are executed \"uptime\" command\n")
+        console.write('You are executed "uptime" command\n')
 
     def cancel(self):
-        console.write("You are canceled \"uptime\" command\n")
+        console.write('You are canceled "uptime" command\n')
 
     @staticmethod
     def name():
@@ -54,7 +54,7 @@ class UndoCommand(Command):
         try:
             cmd = HISTORY.pop()
             TRASH.append(cmd)
-            console.write("Undo command \"{0}\"\n".format(cmd.name()))
+            console.write('Undo command "{0}"\n'.format(cmd.name()))
             cmd.cancel()
 
         except IndexError:
@@ -74,7 +74,7 @@ class RedoCommand(Command):
         try:
             cmd = TRASH.pop()
             HISTORY.append(cmd)
-            console.write("Redo command \"{0}\"\n".format(cmd.name()))
+            console.write('Redo command "{0}"\n'.format(cmd.name()))
             cmd.execute()
 
         except IndexError:
@@ -118,8 +118,14 @@ class ExitCommand(Command):
 
 
 # Словарь доступных команд
-COMMANDS = {'rm': RmCommand(), 'uptime': UptimeCommand(), 'undo': UndoCommand(), 'redo': RedoCommand(),
-            'history': HistoryCommand(), 'exit': ExitCommand()}
+COMMANDS = {
+    "rm": RmCommand(),
+    "uptime": UptimeCommand(),
+    "undo": UndoCommand(),
+    "redo": RedoCommand(),
+    "history": HistoryCommand(),
+    "exit": ExitCommand(),
+}
 
 HISTORY = list()
 TRASH = list()
@@ -139,9 +145,11 @@ def main():
                 command = COMMANDS[cmd]
                 command.execute()
 
-                if not isinstance(command, UndoCommand) and not isinstance(command, RedoCommand) and not isinstance(
-                        command, HistoryCommand):
-                    TRASH = list()
+                if (
+                    not isinstance(command, UndoCommand)
+                    and not isinstance(command, RedoCommand)
+                    and not isinstance(command, HistoryCommand)
+                ):
                     HISTORY.append(command)
 
             except KeyError:
