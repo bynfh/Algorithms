@@ -1,8 +1,9 @@
-from singletone_pattern.singleton_meta import SingletonMeta
+from patterns.singletone.impl_singletone import SingletonMeta
 
 
 class DataBase(metaclass=SingletonMeta):
     """Это потокобезопасная реализация класса Singleton."""
+
     value: str = None
 
     def __init__(self, value: str):
@@ -13,4 +14,3 @@ class DataBase(metaclass=SingletonMeta):
 
     def __repr__(self):
         return f"{self.value=}"
-
