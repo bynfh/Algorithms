@@ -1,4 +1,4 @@
-from observ_pattern_async.observer_base import ObserverBase
+from patterns.observer_pattern_async.observer_base import ObserverBase
 
 
 class AsyncRealisationObserver(ObserverBase):
@@ -14,9 +14,9 @@ class AsyncRealisationObserver(ObserverBase):
 
     async def display(self):
         if self.changed:
-            print(f"Я Умная функция отслеживаю изменения."
-                  f" Текущие данные: {self.value} Имя объекта:{self.__class__.__name__}")
+            print(
+                f"Я Умная функция отслеживаю изменения."
+                f" Текущие данные: {self.value} Имя объекта:{self.__class__.__name__}",
+            )
 
             self.changed = False
-
-

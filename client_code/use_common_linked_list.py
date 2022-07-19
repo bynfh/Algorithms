@@ -1,15 +1,4 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-    def append(self, value):
-        end = Node(value)
-        n = self
-        while n.next:
-            n = n.next
-        n.next = end
-
+from data_structures.linked_list.common_linked_list import Node
 
 First = 1
 Second = 2
@@ -27,4 +16,3 @@ while Testing.next:
     First += 1
     assert Testing.data == First
 print("Test successful")
-

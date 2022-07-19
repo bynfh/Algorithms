@@ -1,4 +1,4 @@
-from ObserverPattern.observer_base import ObserverBase
+from patterns.observer_pattern.observer_base import ObserverBase
 
 
 class SecondRealisationObserver(ObserverBase):

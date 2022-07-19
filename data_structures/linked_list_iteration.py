@@ -46,12 +46,3 @@ class LinkedList:
 
     def __iter__(self):
         return self
-
-
-Test = LinkedList(1)
-Test.append(2)
-Test.append(3)
-
-for _ in Test:
-    print(_)
-

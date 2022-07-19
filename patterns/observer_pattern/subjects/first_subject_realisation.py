@@ -1,7 +1,7 @@
 from typing import List
 
-from observ_pattern_async.observer_base import ObserverBase
-from observ_pattern_async.subject_base import SubjectBase
+from patterns.observer_pattern.observer_base import ObserverBase
+from patterns.observer_pattern.subject_base import SubjectBase
 
 
 class FirstRealisationSubject(SubjectBase):

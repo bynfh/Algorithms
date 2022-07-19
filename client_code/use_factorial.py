@@ -2,7 +2,7 @@
 
 Max count of call == 998 Function with loop don't have restrict in call
 """
-from utils.factorials import calculate_fact_by_recursion, calculate_fact_by_loop
+from algorithms.calculators_sequense.factorials import calculate_fact_by_recursion, calculate_fact_by_loop
 
 print("=" * 5 + "Start tests first block" + "=" * 5)
 assert calculate_fact_by_recursion(5) == 120

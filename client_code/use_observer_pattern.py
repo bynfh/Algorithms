@@ -1,16 +1,16 @@
 import random
 import time
 
-from ObserverPattern.observers.first_observer_realisation import FirstRealisationObserver
-from ObserverPattern.observers.second_observer_realisation import SecondRealisationObserver
-from ObserverPattern.subject_base import SubjectBase
-from ObserverPattern.subjects.first_subject_realisation import FirstRealisationSubject
+from patterns.observer_pattern.observer.first_observer_realisation import FirstRealisationObserver
+from patterns.observer_pattern.observer.second_observer_realisation import SecondRealisationObserver
+from patterns.observer_pattern.subject_base import SubjectBase
+from patterns.observer_pattern.subjects.first_subject_realisation import FirstRealisationSubject
 
 values = [str(i) for i in range(100)]
 
 
 def imitate_changes(subject: SubjectBase):
-    """Имитация изменения в subject"""
+    """Имитация изменения в subject."""
     time.sleep(1)
     subject.notify(random.choice(values))
 

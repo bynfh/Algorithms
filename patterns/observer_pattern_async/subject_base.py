@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from ObserverPattern.observer_base import ObserverBase
+from patterns.observer_pattern_async.observer_base import ObserverBase
 
 
 class SubjectBase(ABC):
